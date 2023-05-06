@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">
+
+        <title> Listagem de Produtos </title>
+
+         <!-- CSS -->
+         <link rel="stylesheet" href="style.css">
+
+          <!-- Normalize -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+    <section id="color">
+
+    
+    <h1>Listagem de Produtos</h1>
+
+    <button onclick="exibirCadastroForm()">Cadastrar novo produto</button>
+
+    <!-- Comeco formulario-->
+    <form id="cadastroForm" onsubmit="cadastrarProduto(event)">
+        <h2>Cadastro de Produto</h2>
+
+        <!-- Nome do Produto-->
+        <label for="nomeProduto">Produto:</label>
+        <input type="text" id="nomeProduto" required>
+
+        
+        <!-- valor-->
+        <label for="valorProduto">Valor:</label>
+        <input type="number" id="valorProduto" step="0.01" required>
+
+       
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+     <!-- Final formulario-->
+
+    <table id="listaProdutos">
+        <tr>
+            <th>Nome</th>
+            <th>Valor</th>
+        </tr>
+    </table>
+
+</section>
+
+<script src="main.js"></script>
+</body>
+</html>
